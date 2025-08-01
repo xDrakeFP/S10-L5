@@ -1,0 +1,125 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #f8f9fa;
+    --card-border: #ccc;
+    --secondary-text: #6c757d;
+    --input-bg: #ffffff;
+    --input-border: #ced4da;
+    --btn-bg: #0d6efd;
+    --btn-text: #ffffff;
+    --accent-color: #0dcaf0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "Roboto", sans-serif;
+}
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --card-bg: #1e1e1e;
+    --card-border: #444;
+    --secondary-text: #bbb;
+    --input-bg: #1d1d1d;
+    --input-border: #555;
+    --btn-bg: #2d6a4f;
+    --btn-text: #ffffff;
+    --accent-color: #20c997;
+}
+
+.card {
+    background-color: var(--card-bg) !important;
+    border-color: var(--card-border) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card .text-muted {
+    color: var(--secondary-text) !important;
+}
+
+.form-control {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border-color: var(--input-border);
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: var(--secondary-text);
+}
+
+.btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+img.weather-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+body.dark-mode img.weather-icon {
+    filter: brightness(0.85) contrast(1.1);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+.spinner-border {
+    color: var(--accent-color);
+}
+
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: center;
+}
+
+.day-column {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forecast-flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.forecast-box {
+    flex: none;
+    width: 100%;
+    border: 1px solid var(--card-border);
+    border-radius: 0.75rem;
+}
+
+.forecast-box small {
+    color: var(--secondary-text);
+    font-size: 0.8rem;
+}
